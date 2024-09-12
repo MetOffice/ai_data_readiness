@@ -1,0 +1,125 @@
+{
+  "GeneralInformation": {   
+    "DatasetName": "",
+    "DatasetVersion": "",
+    "DatasetLink": "",
+    "AssessorName": "",
+    "AssessorEmailAddress": "",
+    "RawOrDerived": null,
+    "ObservedModeledSyntheticData": null,
+    "DataSource": null
+  },
+  
+  "DataQuality": {
+    "Timeliness": {
+      "WillBeUpdated": null,
+      "WhenNewDataAdded": null,
+      "DifferentStages": null,
+      "DelayBetweenStages": "",
+      "SupersedeCurrentVersion": null
+      },
+    "Completeness": {
+      "DocumentationAvailable": null,
+      "LinkToReport": "",
+      "SpatialCoverage": null,
+      "TemporalCoverage": null
+    },
+    "Consistency": {
+      "SelfConsistent": null,
+      "ConsistentWithSimilarData": null,
+      "MonitoringProcessesExist": null,
+      "MonitoringProcessesDetails" : ""    
+    },
+
+
+    
+    "DataBias": {
+      "KnownBias": "Yes/No",
+      "BiasInformation": "",
+      "BiasExaminationMeasures": "Yes/No",
+      "MeasuresUsed": "",
+      "MetrologicalTraceability": "",
+      "ReportedBias": "No known bias/Bias found and reported/No information available",
+      "BiasReportLink": "",
+      "BiasReductionToolsLink": "",
+      "BiasCorrectedDatasetLink": "",
+      "QuantitativeResolutionInfo": "Yes/No/Not applicable",
+      "PublishedQualityProcedures": "Yes/No",
+      "QualityInformationLink": "",
+      "ProvenanceTracked": "Yes/No/Not applicable",
+      "DataIntegrityChecks": "Yes/No/Not applicable",
+      "DatasetSize": ""
+    }
+  },
+  "DataDocumentation": {
+    "MetadataStandard": {
+      "FollowsStandard": "Yes/No/Not applicable",
+      "StandardName": "CF/TBD/others",
+      "MachineReadable": "Yes/No/Not applicable",
+      "SpatialTemporalExtent": "Yes/No/Not applicable"
+    },
+    "DataDictionary": {
+      "Exists": "Yes/No/Not applicable",
+      "Standardized": "Yes/No/Not applicable",
+      "MachineReadable": "Yes/No/Not applicable",
+      "ParametersFollowStandard": "Yes/No/Not applicable",
+      "StandardName": "",
+      "ParametersCrosswalked": "Yes/No/Not applicable"
+    },
+    "PersistentIdentifier": {
+      "Exists": "Yes/No/Not applicable",
+      "Identifier": ""
+    },
+    "ContactInformation": "Yes/No/Not applicable",
+    "UserFeedbackMechanism": "Yes/No/Not applicable",
+    "ExampleCodesAvailable": "Yes/No/Not applicable",
+    "DataLicense": {
+      "LicenseType": "",
+      "StandardizedMachineReadable": "Yes/No/Not applicable"
+    },
+    "AIorMLUsage": {
+      "UsedInAIorML": "Yes/No",
+      "PublicationsLink": ""
+    },
+    "UsageRecommendations": "Yes/No/Not applicable"
+  },
+  "DataAccess": {
+    "FileFormats": {
+      "Formats": "",
+      "MachineReadable": "Yes/No/Not applicable",
+      "OpenFormatAvailable": "Yes/No/Not applicable",
+      "FormatConversionTools": "Yes/No",
+      "ConversionToolsLink": ""
+    },
+    "DataDelivery": {
+      "AuthenticationRequired": "Yes/No/Not applicable",
+      "DirectDownloadAvailable": "Yes/No/Not applicable",
+      "APIorWebService": {
+        "Available": "Yes/No/Not applicable",
+        "FollowsOpenStandard": "Yes/No",
+        "DocumentationAvailable": "Yes/No",
+        "DocumentationLink": ""
+      },
+      "CloudServices": "Yes/No/Not applicable"
+    },
+    "RestrictedDataAccess": {
+      "MeasuresTaken": "Yes/No/Not applicable",
+      "DataAggregated": "Yes/No/Not applicable",
+      "DataAnonymized": "Yes/No/Not applicable",
+      "SecureAccessForAuthorizedUsers": "Yes/No/Not applicable"
+    }
+  },
+  "DataPreparation": {
+    "NullValuesFilled": "Yes/No/Not applicable",
+    "OutliersIdentified": "Yes, tagged/Yes, removed/No/Not applicable",
+    "GriddedData": {
+      "Gridded": "Regularly gridded in space/Constant time-frequency/Regularly gridded in space and constant time-frequency/Not gridded/Not applicable",
+      "TransformedFromOriginal": "Yes, from irregular sampling/Yes, from a different regular sampling/No, this is the original sampling",
+      "OriginalSamplingAvailable": "Yes/No/Only available at request/Not applicable"
+    },
+    "SupervisedLearningTargets": {
+      "Available": "Yes/No/Not applicable",
+      "CommunityLabels": ""
+    }
+  }
+}
