@@ -2,6 +2,9 @@ import json
 
 
 CHECKLIST_FILENAME = "Data_Readiness_Checklist.json"
+widget_width = '900px'
+description_style = {'description_width': 'initial'}
+placeholder = 'Click to select option'
 
 # Helper functions.
 
