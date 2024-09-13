@@ -7,7 +7,7 @@
         "AssessorEmailAddress": "john2@met.com",
         "RawOrDerived": "Derived",
         "ObservedModeledSyntheticData": "Modeled",
-        "DataSource": "Aggregated"
+        "DataSource": "Single-source"
     },
     "DataQuality": {
         "WillBeUpdated": "Yes",
