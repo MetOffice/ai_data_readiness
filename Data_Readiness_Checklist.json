@@ -1,6 +1,6 @@
 {
     "GeneralInformation": {
-        "DatasetName": "Weather dataset 5",
+        "DatasetName": "Weather dataset 6",
         "DatasetVersion": "1.8",
         "DatasetLink": "www.dataset2.com",
         "AssessorName": "John",
@@ -65,15 +65,15 @@
     },
     "DataDocumentation": {
         "MetadataStandard": "Yes",
-        "MetadataStandardName": "CF",
-        "MetadataMachineReadable": "Yes",
-        "MetadataSpatialTemporalExtent": "Yes",
+        "MetadataStandardName": "",
+        "MetadataMachineReadable": "N/A",
+        "MetadataSpatialTemporalExtent": "N/A",
         "DataDictionaryExists": "Yes",
         "DataDictionaryStandardised": "Yes",
         "DataDictionaryMachineReadable": "Yes",
         "DataDictionaryParametersFollowStandard": "No",
-        "DataDictionaryStandardName": "Unknown",
-        "DataDictionaryParametersCrosswalked": "Unknown",
+        "DataDictionaryStandardName": "",
+        "DataDictionaryParametersCrosswalked": "N/A",
         "IdentifierExists": "Yes",
         "Identifier": "www.doi.com",
         "ContactInformation": "Yes",
