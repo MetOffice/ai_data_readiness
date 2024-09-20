@@ -66,6 +66,12 @@ def update_checklist(b, updates):
     save_checklist(checklist) # Save the updated checklist to JSON fil
 
 
+def reset_checklist():
+    with open('Data_Readiness_Checklist_blank.json', 'r') as blank_file:
+        data = json.load(blank_file)
+
+    with open('Data_Readiness_Checklist.json', 'w') as user_file:
+        json.dump(data, user_file, indent=4)
 
 
   
