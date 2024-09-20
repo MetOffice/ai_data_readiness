@@ -1,0 +1,8 @@
+name: data_readiness 
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
