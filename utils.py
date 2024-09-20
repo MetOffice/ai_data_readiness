@@ -67,23 +67,5 @@ def update_checklist(b, updates):
 
 
 
-def print_json_info(b):
-    """
-    Loads a copy of the json file to checklist variable. 
-    Then prints the json file contents to Jupyter notebook cell output.
-
-    Arguments: b - represents the button calling the function. 
-    """
-    
-    checklist = load_checklist()
-    with output:
-        clear_output()
-        for key, value in checklist.items():
-            print(f"{key}:")
-            if isinstance(value, dict):
-                for sub_key, sub_value in value.items():
-                    print(f"  {sub_key}: {sub_value}")
-            else:
-                print(f"  {value}")
 
   
