@@ -1,5 +1,5 @@
 examples/ERA5/data/*
-examples/ERA5/data/.gitkeep
+!examples/ERA5/data/.gitkeep
 examples/ERA5/runs
 examples/ISD/data/*
-examples/ISD/data/.gitkeep
+!examples/ISD/data/.gitkeep
