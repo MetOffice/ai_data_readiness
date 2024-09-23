@@ -1,0 +1,15 @@
+name: data_readiness_era5
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - jupyterlab
+  - ipykernel
+  - ipywidgets 
+  - numpy
+  - pytorch
+  - cfgrib 
+  - scikit-learn
+  - matplotlib
+  - xesmf
+  - cartopy
