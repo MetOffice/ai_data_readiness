@@ -66,24 +66,12 @@ def update_checklist(b, updates):
     save_checklist(checklist) # Save the updated checklist to JSON fil
 
 
+def reset_checklist():
+    with open('Data_Readiness_Checklist_blank.json', 'r') as blank_file:
+        data = json.load(blank_file)
 
-def print_json_info(b):
-    """
-    Loads a copy of the json file to checklist variable. 
-    Then prints the json file contents to Jupyter notebook cell output.
+    with open('Data_Readiness_Checklist.json', 'w') as user_file:
+        json.dump(data, user_file, indent=4)
 
-    Arguments: b - represents the button calling the function. 
-    """
-    
-    checklist = load_checklist()
-    with output:
-        clear_output()
-        for key, value in checklist.items():
-            print(f"{key}:")
-            if isinstance(value, dict):
-                for sub_key, sub_value in value.items():
-                    print(f"  {sub_key}: {sub_value}")
-            else:
-                print(f"  {value}")
 
   
