@@ -7,7 +7,9 @@ dependencies:
   - ipykernel
   - ipywidgets 
   - numpy
-  - torch
+  - pytorch
   - cfgrib 
   - scikit-learn
   - matplotlib
+  - xesmf
+  - cartopy
