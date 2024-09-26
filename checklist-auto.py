@@ -98,7 +98,7 @@ def get_temporal_resolution_and_coverage(dataset):
     
     return resolution, coverage
 
-def check_consistency(dataset):
+def check_spatial_consistency(dataset):
     # Check spatial consistency
     if 'latitude' in dataset.coords and 'longitude' in dataset.coords:
         lat = dataset['latitude']
@@ -107,34 +107,35 @@ def check_consistency(dataset):
         lat = dataset['lat']
         lon = dataset['lon']
     else:
-        print("Latitude and Longitude coordinates not found in the dataset.")
-        return False
+        # Latitude and Longitude coordinates not found in the dataset.")
+        return None 
     
     lat_diff = np.diff(lat.values)
     lon_diff = np.diff(lon.values)
 
-    spatial_consistency = True
-    temporal_consistency = True
-    
     if not np.allclose(lat_diff, lat_diff[0]) or not np.allclose(lon_diff, lon_diff[0]):
         print("Spatial resolution is not consistent.")
-        spatial_consistency = False
+        return False
+
+    return True
     
+
+def check_temporal_consistency(dataset):
     # Check temporal consistency
     if 'time' in dataset.coords:
         time = dataset['time']
     else:
         # Time coordinate not found in the dataset
-        temporal_consistency = False
+        return None
     
     time_diff = np.diff(time.values).astype('timedelta64[h]').astype(int)
     
     if not np.allclose(time_diff, time_diff[0]):
         # Temporal resolution is not consistent
-        temporal_consistency = False
+        return False 
     
     # Spatial and temporal resolutions are consistent
-    return spatial_consistency, temporal_consistency
+    return True 
 
 def main():
     file_path = select_file()
@@ -145,20 +146,24 @@ def main():
     dataset = detect_gridded_format_and_open(file_path)
 
     if dataset is not None:
-        resolution, coverage = get_spatial_resolution_and_coverage(dataset)
+        spatial_resolution, spatial_coverage = get_spatial_resolution_and_coverage(dataset)
         temporal_resolution, temporal_coverage = get_temporal_resolution_and_coverage(dataset)        
-        if resolution and coverage:
-            print(f"Resolution: Latitude - {resolution[0]} degrees, Longitude - {resolution[1]} degrees")
-            print(f"Coverage: Latitude - {coverage['latitude'][0]} to {coverage['latitude'][1]} degrees, "
-                f"Longitude - {coverage['longitude'][0]} to {coverage['longitude'][1]} degrees")
+        if spatial_resolution and spatial_coverage:
+            print(f"Resolution: Latitude - {spatial_resolution[0]} degrees, Longitude - {spatial_resolution[1]} degrees")
+            print(f"Coverage: Latitude - {spatial_coverage['latitude'][0]} to {spatial_coverage['latitude'][1]} degrees, "
+                f"Longitude - {spatial_coverage['longitude'][0]} to {spatial_coverage['longitude'][1]} degrees")
 
         if temporal_resolution and temporal_coverage:
             print(f"Temporal Resolution: {temporal_resolution} hours")
             print(f"Temporal Coverage: {temporal_coverage['time'][0]} to {temporal_coverage['time'][1]}")
 
-        spatial_consistency, temporal_consistency = check_consistency(dataset)
-        print(f"Spatial Consistency: {spatial_consistency}")
-        print(f"Temporal Consistency: {temporal_consistency}")
+        spatial_consistency = check_spatial_consistency(dataset)
+        temporal_consistency = check_temporal_consistency(dataset)
+
+        if spatial_consistency != None:
+            print(f"Spatial Consistency: {spatial_consistency}")
+        if temporal_consistency != None:
+            print(f"Temporal Consistency: {temporal_consistency}")
 
 if __name__ == "__main__":
     main()

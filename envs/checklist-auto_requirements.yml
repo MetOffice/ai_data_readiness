@@ -1,0 +1,15 @@
+name: data_readiness_checklist_auto
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - jupyterlab
+  - ipykernel
+  - ipywidgets 
+  - numpy
+  - xarray
+  - netCDF4
+  - cfgrib
+  - h5netcdf
+  - zarr
+  - rasterio
