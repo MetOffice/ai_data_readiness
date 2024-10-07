@@ -2,13 +2,12 @@ import requests
 import os
 import argparse
 from bs4 import BeautifulSoup
-from base64 import b64encode
 import json
+from urllib.parse import urlparse
+# from netcdf4 import Dataset
 
 # Base URL for HadUK-Grid daily rainfall data
 BASE_URL = "https://dap.ceda.ac.uk/badc/ukmo-hadobs/data/insitu/MOHC/HadOBS/HadUK-Grid/v1.3.0.ceda/60km/rainfall/day/latest/"
-
-TOKEN_URL = "https://services-beta.ceda.ac.uk/api/token/create/"
 
 # Directory where data will be downloaded
 DOWNLOAD_DIR = "./data"
@@ -21,33 +20,11 @@ def download_file(url, download_dir):
     local_filename = os.path.join(download_dir, url.split('/')[-1])
     print(f"Downloading {url} to {local_filename}")
 
-    username = os.environ["CEDA_USERNAME"]
-    password = os.environ["CEDA_PASSWORD"]
-
-    token = b64encode(f"{username}:{password}".encode('utf-8')).decode("ascii")
-
+    token = os.environ["CEDA_TOKEN"]
+    
     headers = {
       "Authorization": f"Bearer {token}"
     }
-
-    response = requests.request("POST", TOKEN_URL, headers=headers)
-
-    # If successful, this will return a JSON response containing the token
-    # Print the response for debugging
-    print(response.text)
-
-    # Check if the request was successful
-    if response.status_code == 200:
-        response_data = json.loads(response.text)
-        token = response_data.get("access_token")
-        if token:
-            print(f"Token: {token}")
-        else:
-            print("Error: 'access_token' not found in the response.")
-            return
-    else:
-        print(f"Error: Received status code {response.status_code}")
-        return
 
     # Download the file with streaming to avoid loading large files into memory
     with requests.get(url, headers=headers, stream=True) as response:
@@ -55,6 +32,10 @@ def download_file(url, download_dir):
         with open(local_filename, 'wb') as file:
             for chunk in response.iter_content(chunk_size=8192):
                 file.write(chunk)
+
+    # response = requests.request("GET", url, headers=headers, stream=True)
+    # filename = os.path.basename(urlparse(url).path)
+    # dataset = Dataset(filename, memory=response.content)
 
     print(f"Downloaded: {local_filename}")
 
