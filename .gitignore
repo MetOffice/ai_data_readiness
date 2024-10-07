@@ -3,3 +3,5 @@ examples/ERA5/data/*
 examples/ERA5/runs
 examples/ISD/data/*
 !examples/ISD/data/.gitkeep
+.DS_Store
+__pycache__/
