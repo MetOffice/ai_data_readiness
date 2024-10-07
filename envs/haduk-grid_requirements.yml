@@ -10,3 +10,4 @@ dependencies:
   - matplotlib
   - netCDF4
   - xarray
+  - beautifulsoup4
