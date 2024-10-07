@@ -137,6 +137,9 @@ def check_temporal_consistency(dataset):
     # Spatial and temporal resolutions are consistent
     return True 
 
+def check():
+    pass
+
 def main():
     file_path = select_file()
     if not file_path:
