@@ -30,17 +30,27 @@ This repository contains a checklist which will help you identify if your datase
 
 
 ## **Setup**
-### Set up your environment
-#### **Clone the repository** 
+### Clone the repository
 
-#### **Create an environment** 
+### Create an environment 
 
-#### **Run the checklist**
+### Run the checklist
 The notebooks use Jupyter Widgets (ipywidgets) to make the data entry process more effecient by utilising drop down menus to provide suggested answers. It also enables the collation of results which are stored in a json file for potential future use and will enable you to reload your answers and also view them as a data structure object. A theme of this project was making ML processes more accessible and we wanted to explore whether building more accessible UI was beneficial. We were also motivated to store the checklist answers in a structured and accessible way to enable future work and checklist assessment comparisons. 
 
 * To load the widgets select 'Run' from the ribbon menu and then 'Run All Cells'
 * Use the save buttons to periodically save your answers in the json file.
 * You can view all your results by using the button in the finished section at the end of each notebook.
+
+
+## **Examples**
+We have completed the checklist with a variety of datasets to demonstrate how to use it. 
+Whilst completing the questions is important, we are also using the notebooks to evidence the process used to discover the answers. Such as how to identify outliers, null values etc.
+Some of the completed checklist folders include simple example machine learning (ML) projects to demonstrate how the datasets could be used. You could use these as a starting point for your own ML exploration or try and improve the example project performance. 
+
+* ERA5 - includes an example PyTorch Autoencoder ML example
+* HadCRUT5 - includes an XGBoost and TensorFlow Convolutional Neural Network (CNN) regression ML example with lagged features. 
+* ISD
+* NOAA GSoD - includes a LSTM (Long Short Term Memory) ML example using sequences. 
 
 
 
