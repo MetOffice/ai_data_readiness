@@ -1,4 +1,4 @@
-# AI Data Readiness
+# AI Data Readiness Checklist
 
 
 ## **Overview**
