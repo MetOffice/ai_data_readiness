@@ -12,7 +12,9 @@ c.retrieve(
             '2m_temperature', 'surface_pressure', 'total_precipitation',
         ],
         'year': '2023',
-        'day': '26',
+        "day": [
+            "01", "02", "03",
+        ],
         'time': [
             '00:00', '01:00', '02:00',
             '03:00', '04:00', '05:00',
