@@ -1,0 +1,14 @@
+name: noaa_gsod 
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+  - pandas=2.2.3
+  - numpy=1.26.4
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - tensorflow=2.17.0
