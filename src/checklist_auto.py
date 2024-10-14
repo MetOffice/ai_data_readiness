@@ -3,6 +3,7 @@ from tkinter import Tk, filedialog
 import xarray as xr
 import numpy as np
 import os
+import logger
 
 def select_file():
     """Open a file dialog to select a file."""
