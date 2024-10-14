@@ -67,9 +67,7 @@
       "UsageRecommendations": null
   },
   "DataAccess": {
-      "FileFormats": [
-        "Other"
-      ],
+      "FileFormats": [],
       "FileFormatsMachineReadable": null,
       "OpenFormatAvailable": null,
       "FormatConversionTools": null,
