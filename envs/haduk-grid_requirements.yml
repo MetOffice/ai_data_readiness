@@ -1,0 +1,14 @@
+name: data_readiness_haduk-grid
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - ipykernel
+  - numpy
+  - pytorch
+  - scikit-learn
+  - matplotlib
+  - netCDF4
+  - xarray
+  - beautifulsoup4
+  - requests

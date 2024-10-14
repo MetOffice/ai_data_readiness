@@ -1,5 +1,5 @@
 examples/*/data/*
 !examples/*/data/.gitkeep
 examples/*/runs
-__pycache__
 .DS_Store
+__pycache__/
