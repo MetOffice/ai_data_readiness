@@ -20,6 +20,11 @@ def parse_arguments():
     parser.add_argument('--dirs', nargs='*', help="List of directories containing tabular data files")
     parser.add_argument('--output', type=str, help="Path to save the analysis results in CSV or JSON format")
     
+    parser.add_argument('--custom-nan', nargs='*', default=None, 
+                        help="Custom NaN values to be treated as missing (e.g. -999 -9999)")
+    parser.add_argument('--outlier-threshold', type=float, default=3.0, 
+                        help="Z-score threshold for detecting outliers (default: 3.0)")
+
     args = parser.parse_args()
     
     if not args.files and not args.dirs:
@@ -27,7 +32,7 @@ def parse_arguments():
     
     return args
 
-def detect_tabular_format_and_open(file_path):
+def detect_tabular_format_and_open(file_path, custom_nan=None):
     """Detect the file format based on the file extension and open it with pandas."""
     _, file_extension = os.path.splitext(file_path)
     
@@ -43,7 +48,8 @@ def detect_tabular_format_and_open(file_path):
         return None
     
     try:
-        df = format_engine_map[file_extension](file_path)
+        # Handle custom NaN values
+        df = format_engine_map[file_extension](file_path, na_values=custom_nan)
         logger.info(f"Successfully opened {file_path}")
         return df
     except Exception as e:
@@ -96,8 +102,8 @@ def check_temporal_consistency(df, time_col='time'):
         logger.info(f"Time column '{time_col}' not found.")
         return None
 
-def check_outliers(df, numerical_cols=None):
-    """Detect outliers in the dataset (using a basic Z-score method)."""
+def check_outliers(df, threshold=3.0, numerical_cols=None):
+    """Detect outliers in the dataset (using a Z-score method)."""
     if numerical_cols is None:
         numerical_cols = df.select_dtypes(include=[np.number]).columns
     
@@ -105,7 +111,7 @@ def check_outliers(df, numerical_cols=None):
     
     for col in numerical_cols:
         z_scores = np.abs((df[col] - df[col].mean()) / df[col].std())
-        outlier_count = (z_scores > 3).sum()
+        outlier_count = (z_scores > threshold).sum()
         if outlier_count > 0:
             outliers[col] = outlier_count
     
@@ -127,15 +133,15 @@ def save_results(results, output_path):
     else:
         logger.error(f"Unsupported output format for {output_path}")
 
-def process_file(file_path, output_path=None):
+def process_file(file_path, output_path=None, custom_nan=None, outlier_threshold=3.0):
     """Process a single tabular file."""
-    df = detect_tabular_format_and_open(file_path)
+    df = detect_tabular_format_and_open(file_path, custom_nan=custom_nan)
 
     if df is not None:
         missing_values = check_missing_values(df)
         column_consistency = check_column_consistency(df)
         temporal_consistency = check_temporal_consistency(df)
-        outliers = check_outliers(df)
+        outliers = check_outliers(df, threshold=outlier_threshold)
         
         result = {
             'file': file_path,
@@ -150,7 +156,7 @@ def process_file(file_path, output_path=None):
         
         return result
 
-def process_directory(directory, output_path=None):
+def process_directory(directory, output_path=None, custom_nan=None, outlier_threshold=3.0):
     """Process all supported files in a directory sequentially."""
     all_files = []
     for root, _, files in os.walk(directory):
@@ -159,7 +165,7 @@ def process_directory(directory, output_path=None):
     results = []
     with tqdm(total=len(all_files), desc="Processing files") as pbar:
         for file_path in all_files:
-            result = process_file(file_path, output_path)
+            result = process_file(file_path, output_path, custom_nan=custom_nan, outlier_threshold=outlier_threshold)
             if result:
                 results.append(result)
             pbar.update(1)
@@ -175,7 +181,7 @@ def main():
     if args.files:
         for file_path in args.files:
             logger.info(f"Processing file: {file_path}")
-            result = process_file(file_path, args.output)
+            result = process_file(file_path, args.output, custom_nan=args.custom_nan, outlier_threshold=args.outlier_threshold)
             if result:
                 results.append(result)
     
@@ -183,7 +189,7 @@ def main():
     if args.dirs:
         for directory in args.dirs:
             logger.info(f"Processing directory: {directory}")
-            dir_results = process_directory(directory, args.output)
+            dir_results = process_directory(directory, args.output, custom_nan=args.custom_nan, outlier_threshold=args.outlier_threshold)
             results.extend(dir_results)
 
     if args.output:
@@ -193,3 +199,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
