@@ -1,0 +1,20 @@
+name: data_readiness_hadcrut5
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - jupyterlab
+  - ipykernel
+  - ipywidgets 
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - cartopy
+  - os
+  - joblib
+  - xarray
+  - pandas
+  - xgboost
+  - seaborn
+  - tensorflow
+  - keras
