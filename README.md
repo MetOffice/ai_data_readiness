@@ -54,14 +54,14 @@ We have completed the checklist with a variety of datasets to demonstrate how to
 Whilst completing the questions is important, we are also using the notebooks to evidence the process used to discover the answers. Such as how to identify outliers, null values etc.
 Some of the completed checklist folders include simple example machine learning (ML) projects to demonstrate how the datasets could be used. You could use these as a starting point for your own ML exploration or try and improve the example project performance. 
 
-| Dataset | Organization | Data Summary |  Data Format Used | Machine Learning Summary | Environment Directory | 
-| - | - | - | - | - | - |
-| ERA5 | ECMWF | Global Geospatial Gridded Reanalysis | Grib | Autoencoder: Compress data | env/era5_requirements.yml |
-| Global Summary of the Day | NOAA | *Description* | CSV | XGBoost: Predict Class  | env/gsod_xgboost_requirements.yml |
-| Global Summary of the Day | NOAA | *Description* | CSV | LSTM: *Summary* | env/gsod_lstm_requirements.yml |
-| HadCRUT5 | Met Office | *Description* | CSV | XGBoost: *Summary* | env/hadcrut5_requirements.yml |
-| HadCRUT5 | Met Office | *Description* | CSV | CNN: *Summary* | env/hadcrut5_requirements.yml |
-| HadUK-Grid | Met Office | UK Geospatial Gridded | NetCDF | CNN: Forecast future values | env/haduk_grid_requirements.yml |
+| Dataset | Organization | Data Summary | Machine Learning Summary | Environment Directory | 
+| - | - | - | - | - |
+| ERA5 | ECMWF | Global Geospatial Gridded Climate Reanalysis | Autoencoder: Compress data | env/era5_requirements.yml |
+| Global Summary of the Day | NOAA | *Description* | XGBoost: Predict Class  | env/gsod_xgboost_requirements.yml |
+| Global Summary of the Day | NOAA | *Description* | LSTM: *Summary* | env/gsod_lstm_requirements.yml |
+| HadCRUT5 | Met Office | *Description* | XGBoost: *Summary* | env/hadcrut5_requirements.yml |
+| HadCRUT5 | Met Office | *Description* | CNN: *Summary* | env/hadcrut5_requirements.yml |
+| HadUK-Grid | Met Office | UK Geospatial Gridded | CNN: Forecast future values | env/haduk_grid_requirements.yml |
 
 ## **Dataset Suggestions**
 Find suggested datasets here: [datasets.md](./datasets.md)
