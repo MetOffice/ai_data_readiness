@@ -1,4 +1,4 @@
-name: noaa_gsod 
+name: data_readiness_gsod_lstm
 channels:
   - conda-forge
 dependencies:

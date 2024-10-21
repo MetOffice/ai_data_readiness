@@ -1,4 +1,4 @@
-name: data_readiness_isd
+name: data_readiness_gsod_xgboost
 channels:
   - conda-forge
 dependencies:

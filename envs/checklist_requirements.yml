@@ -1,4 +1,4 @@
-name: data_readiness 
+name: data_readiness_checklist
 channels:
   - conda-forge
 dependencies:
