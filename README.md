@@ -54,4 +54,8 @@ Some of the completed checklist folders include simple example machine learning 
 
 
 
+## **Dataset Suggestions**
+[Find suggested datasets here: datasets.md](./datasets.md)
+
+
 
