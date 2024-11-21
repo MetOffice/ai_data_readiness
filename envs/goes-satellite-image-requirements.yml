@@ -1,0 +1,15 @@
+name: data_readiness-goes-satellite-image
+channels:
+  - defaults
+dependencies:
+  - ipython
+  - matplotlib
+  - numpy
+  - pillow
+  - requests
+  - scikit-learn
+  - tensorflow
+  - ipykernel
+  - jupyter_client[version='<8']
+  - notebook
+  - pyzmq[version='<25']
