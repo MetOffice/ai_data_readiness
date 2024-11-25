@@ -56,12 +56,11 @@ Some of the completed checklist folders include simple example machine learning 
 
 | Dataset | Organization | Data Summary | Machine Learning Summary | Environment Directory | 
 | - | - | - | - | - |
-| ERA5 | ECMWF | Global Geospatial Gridded Climate Reanalysis | Autoencoder: Compress data | env/era5_requirements.yml |
-| Global Summary of the Day | NOAA | *Description* | XGBoost: Predict Class  | env/gsod_xgboost_requirements.yml |
-| Global Summary of the Day | NOAA | *Description* | LSTM: *Summary* | env/gsod_lstm_requirements.yml |
-| HadCRUT5 | Met Office | *Description* | XGBoost: *Summary* | env/hadcrut5_requirements.yml |
-| HadCRUT5 | Met Office | *Description* | CNN: *Summary* | env/hadcrut5_requirements.yml |
-| HadUK-Grid | Met Office | UK Geospatial Gridded | CNN: Forecast future values | env/haduk_grid_requirements.yml |
+| ERA5 | ECMWF | Global Geospatial Gridded Climate Reanalysis | Autoencoder | era5_requirements.yml |
+| Global Summary of the Day | NOAA | Daiky global weather station observations | XGBoost, LSTM  | gsod_xgboost_requirements.yml, gsod_lstm_requirements.yml |
+| HadCRUT5 | Met Office | Global temperature anomaly data for climate monitoring | XGBoost, CNN | hadcrut5_requirements.yml |
+| HadUK-Grid | Met Office | Gridded UK climate data for temperature and precipitation | CNN | haduk_grid_requirements.yml |
+| GOES Satellite Imagery | NOAA | Real-time satellite imagery for weather monitoring | ConvLSTM | goes-satellite-image-requirements.yml |
 
 ## **Dataset Suggestions**
 Find suggested datasets here: [datasets.md](./datasets.md)

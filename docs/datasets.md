@@ -8,4 +8,3 @@
   * [CMIP6 climate projections](https://cds.climate.copernicus.eu/datasets/projections-cmip6?tab=overview)
   * [Seasonal forecast of fire danger indices from the Copernicus Emergency Management Service](https://ewds.climate.copernicus.eu/datasets/cems-fire-seasonal?tab=overview)
   * [UERRA regional reanalysis for Europe on height levels from 1961 to 2019](https://cds.climate.copernicus.eu/datasets/reanalysis-uerra-europe-height-levels?tab=overview)
-    
