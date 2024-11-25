@@ -10,7 +10,6 @@ dependencies:
   - scikit-learn
   - matplotlib
   - cartopy
-  - os
   - joblib
   - xarray
   - pandas
@@ -18,3 +17,4 @@ dependencies:
   - seaborn
   - tensorflow
   - keras
+  - netcdf4
