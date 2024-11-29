@@ -187,7 +187,7 @@ def check_spatial_coverage(df, lat_column, lon_column, expected_bounds):
     return coverage_results
 
 
-def check_temporal_coverage(df, date_column, expected_start, expected_end):
+def check_temporal_coverage(df, date_column, expected_start, expected_end, frequency="D"):
     """
     Checks and prints the temporal coverage of a dataset against the expected range.
     
@@ -196,6 +196,9 @@ def check_temporal_coverage(df, date_column, expected_start, expected_end):
         date_column (str): Name of the column containing the dates.
         expected_start (str): Expected start date (e.g., "2020-01-01").
         expected_end (str): Expected end date (e.g., "2023-12-31").
+        frequency (str): The frequency to check for missing dates. Options: 'H', 'D', 'W', 'M', 'Y'.
+        (Hour, Day, Week, Month, Year)
+
     
     Returns:
         dict: A dictionary containing the results of the analysis.
@@ -207,25 +210,49 @@ def check_temporal_coverage(df, date_column, expected_start, expected_end):
     # Ensure the date column is sorted
     df = df.sort_values(by=date_column)
 
-    time_format = "%Y-%m-%d"
+    frequency_map = {
+        "H" : "hour",
+        "D" : "day",
+        "W" : "week",
+        "M" : "month",
+        "Y" : "year"
+    }
 
-    # Actual coverage
-    actual_start = df[date_column].min()
-    actual_end = df[date_column].max()
+    if frequency not in frequency_map:
+        raise ValueError(f"Invalid frequency (frequency) Supported frequencies: {list(frequency_map.keys())}.")
 
-    # Create a date range for expected coverage
-    expected_dates = pd.date_range(start=expected_start, end=expected_end)
+    # Generate expected date range
+    expected_dates = pd.date_range(start=expected_start, end=expected_end, freq=frequency)
 
-    # Check for missing dates
+    # Round actual dates to the frequency level to align with expected dates
+    df[date_column] = df[date_column].dt.to_period(frequency).dt.start_time
     actual_dates = pd.to_datetime(df[date_column].drop_duplicates())
-    missing_dates = expected_dates.difference(actual_dates).strftime(time_format)
+
+    # Find missing dates
+    missing_dates = expected_dates.difference(actual_dates)
+    
+    if frequency == "H":
+        time_format = "%Y-%m-%d %H:%M:%S"
+    else:
+        time_format = "%Y-%m-%d"
+
+    # # Actual coverage
+    # actual_start = df[date_column].min()
+    # actual_end = df[date_column].max()
+
+    # # Create a date range for expected coverage
+    # expected_dates = pd.date_range(start=expected_start, end=expected_end)
+
+    # # Check for missing dates
+    # actual_dates = pd.to_datetime(df[date_column].drop_duplicates())
+    # missing_dates = expected_dates.difference(actual_dates).strftime(time_format)
 
     # Results
     coverage_results = {
         "expected_start": expected_start,
         "expected_end": expected_end,
-        "actual_start": actual_start.strftime(time_format),
-        "actual_end": actual_end.strftime(time_format),
+        "actual_start": actual_dates.min().strftime(time_format),
+        "actual_end": actual_dates.max().strftime(time_format),
         "missing_dates": missing_dates.tolist(),
         "num_missing_dates" : len(missing_dates)
     }
