@@ -9,10 +9,10 @@ ___
 We have used ipywidgets to create data entry fields for the checklist questions to make the process more accessible. <br>
 
 The code to generate these is contained in the hidden cells with ... ellipses. 
-![image](images/hidden_widget_code.png)
+<img src="images/hidden_widget_code.png" width="auto" height="65">
 
 You can open these by clicking on the ... if you wish to review the code. To close them click the blue bar on the left. 
-![image](images/hidden_widget_code_open.png)
+<img src="images/hidden_widget_code_open.png" width="auto" height="180">
 ___
 
 ### Save your answers.
