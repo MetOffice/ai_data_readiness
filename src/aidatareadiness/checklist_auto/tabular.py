@@ -228,11 +228,11 @@ def csv_size_file_info(df, file_path):
     }
     
     # Print the information
-    print(f"Number of rows: {file_results["Number of rows"]}")
-    print(f"Data dimensions: {file_results["Data dimensions"]}")
-    print(f"Data dimensions detail (rows, columns): {file_results["Data dimensions detail"]}")
-    print(f"DataFrame memory used: {file_results["DataFrame memory used"]}")
-    print(f"File memory used: {file_results["File memory used"]}")
+    print(f"Number of rows: {file_results['Number of rows']}")
+    print(f"Data dimensions: {file_results['Data dimensions']}")
+    print(f"Data dimensions detail (rows, columns): {file_results['Data dimensions detail']}")
+    print(f"DataFrame memory used: {file_results['DataFrame memory used']}")
+    print(f"File memory used: {file_results['File memory used']}")
     
     # Return the information as a dictionary
     return file_results
