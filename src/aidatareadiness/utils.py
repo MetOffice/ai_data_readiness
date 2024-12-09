@@ -1,8 +1,4 @@
 import json
-import os
-import pandas as pd
-from scipy.stats import zscore
-import matplotlib.pyplot as plt
 
 
 CHECKLIST_FILENAME = "Data_Readiness_Checklist.json"
