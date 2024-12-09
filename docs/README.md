@@ -40,7 +40,7 @@ Use [Conda](https://www.anaconda.com/download) to create environments for runnin
 
 ```bash
 export DATA_READINESS_PATH=$(pwd)
-conda env create -f env/requirements.yml
+conda env create -f envs/requirements.yml
 ```
 
 ### Run the checklist
