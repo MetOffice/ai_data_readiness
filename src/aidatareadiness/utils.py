@@ -1,4 +1,8 @@
 import json
+import os
+import pandas as pd
+from scipy.stats import zscore
+import matplotlib.pyplot as plt
 
 
 CHECKLIST_FILENAME = "Data_Readiness_Checklist.json"
@@ -6,7 +10,7 @@ widget_width = '900px'
 description_style = {'description_width': 'initial'}
 placeholder = 'Click to select option'
 
-# Helper functions.
+# helper functions for loading / saving checklist data     
 
 def load_checklist():
     """
@@ -72,6 +76,3 @@ def reset_checklist():
 
     with open('Data_Readiness_Checklist.json', 'w') as user_file:
         json.dump(data, user_file, indent=4)
-
-
-  
