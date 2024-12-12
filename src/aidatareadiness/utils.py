@@ -74,4 +74,64 @@ def reset_checklist():
         json.dump(data, user_file, indent=4)
 
 
+
+
+# =========================================================
+#            GRIDDED CHECKLIST HELPER FUNCTIONS           
+# =========================================================
+
+
+def find_general_info(dataset):
+    try:
+        # Read the information from the dataset. 
+        title = dataset.attrs["title"]
+        version = dataset.attrs["version"]
+
+    except KeyError:
+        print("Dict key not found")
+    except ValueError:
+        print("Value not accessible")
+        
+    # Print the information
+    print("Dataset Name:", title)
+    print("Dataset Version:", version)
+
+    return {"DatasetName" : title, "DatasetVersion" : version}
+
+
+
+
+def find_unit_data(dataset):
+
+    variable_data = []
+    
+    for var_name in dataset.variables:
+        variable = dataset.variables[var_name]  # Access the variable
+
+        # Add the variable's information to the list
+        if 'units' in dataset[var_name].attrs:
+            variable_data.append({
+                "variable": var_name,
+                "datatype": str(dataset[var_name].dtype),
+                    "unit": dataset[var_name].units
+            })
+        else:
+            variable_data.append({
+                "variable": var_name,
+                "datatype": str(dataset[var_name].dtype),
+                    "unit": "Unknown"
+            })
+      
+    print("=" * 75)
+    print("{:<25}{:<25}{:25}".format("VARIABLE", "DATATYPE", "UNIT"))
+    print("=" * 75)
+    
+    for variable in variable_data:
+        print("{:<25}{:<25}{:25}".format(variable["variable"], variable["datatype"], variable["unit"]))
+    
+    return variable_data
+
+
+
+
   
