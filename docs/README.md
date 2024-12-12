@@ -36,11 +36,11 @@ git clone git@github.com:informatics-lab/ai_data_readiness.git
 
 ### Create an environment 
 
-Use [Conda](https://www.anaconda.com/download) to create environments for running the Jupyter Notebooks and Python scripts. All of the YAML files to create the Conda environments are stored in the env/ directory. **Use the commands below in the root directory of the project** to create the conda environment for the checklist notebooks.
+Use [Conda](https://www.anaconda.com/download) to create environments for running the Jupyter Notebooks and Python scripts. All of the YAML files to create the Conda environments are stored in the env/ directory. **Use the commands below in the root directory of the project** to create the data_readiness conda environment for the checklist notebooks.
 
 ```bash
-export DATA_READINESS_PATH=$(pwd)
-conda env create -f envs/requirements.yml
+chmod +x setup.sh
+./setup.sh
 ```
 
 ### Run the checklist
