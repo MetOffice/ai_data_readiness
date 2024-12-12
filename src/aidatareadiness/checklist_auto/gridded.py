@@ -8,7 +8,12 @@ import pandas as pd
 from tqdm import tqdm
 
 # Set up logging configuration
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+def configure_logging(verbose):
+    if verbose:
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    else:
+        logging.basicConfig(level=logging.CRITICAL)
+    
 logger = logging.getLogger(__name__)
 
 SUPPORTED_FORMATS = ['.nc', '.grib', '.h5', '.hdf5', '.tif', '.tiff', '.zarr']
@@ -20,6 +25,7 @@ def parse_arguments():
     parser.add_argument('--files', nargs='*', help="List of paths to weather and climate data files")
     parser.add_argument('--dirs', nargs='*', help="List of directories containing weather and climate data files")
     parser.add_argument('--output', type=str, help="Path to save the analysis results in CSV or JSON format")
+    parser.add_argument('--verbose', action='store_true', help="Enable verbose logging")
     
     args = parser.parse_args()
     
@@ -48,7 +54,7 @@ def detect_gridded_format_and_open(file_path):
     
     engine = format_engine_map[file_extension]
     try:
-        ds = xr.open_dataset(file_path, engine=engine)  # No Dask, loading all at once
+        ds = xr.open_dataset(file_path, engine=engine)
         logger.info(f"Successfully opened {file_path} with engine {engine}")
         return ds
     except ValueError as e:
@@ -210,6 +216,9 @@ def main():
     # Parse the command-line arguments
     args = parse_arguments()
 
+    # Configure logging based on the verbose flag
+    configure_logging(args.verbose)
+
     # Process files
     results = []
     if args.files:
@@ -233,3 +242,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
