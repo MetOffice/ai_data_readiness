@@ -6,18 +6,10 @@ import numpy as np
 import json
 import pandas as pd
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from threading import Lock
 
-# Set up logging configuration
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 SUPPORTED_FORMATS = ['.nc', '.grib', '.h5', '.hdf5', '.tif', '.tiff', '.zarr']
-
-# Lock for thread-safe operations
-output_lock = Lock()
-tqdm_lock = Lock()
 
 def parse_arguments():
     """Parse command-line arguments."""
@@ -54,7 +46,7 @@ def detect_gridded_format_and_open(file_path):
     
     engine = format_engine_map[file_extension]
     try:
-        ds = xr.open_dataset(file_path, engine=engine, chunks='auto')  # Lazy loading with Dask
+        ds = xr.open_dataset(file_path, engine=engine)
         logger.info(f"Successfully opened {file_path} with engine {engine}")
         return ds
     except ValueError as e:
@@ -104,7 +96,7 @@ def get_temporal_resolution_and_coverage(dataset):
         return None, None
     
     if time.size > 1:
-        time_res = time.differentiate('time').mean().values.astype('timedelta64[h]').astype(int)  # More accurate
+        time_res = np.diff(time.values).astype('timedelta64[h]').mean().astype(int)
     else:
         time_res = None
     
@@ -158,15 +150,14 @@ def check_temporal_consistency(dataset):
 
 def save_results(results, output_path):
     """Save the results in the specified format (JSON or CSV)."""
-    with output_lock:
-        if output_path.endswith(".json"):
-            with open(output_path, "w") as f:
-                json.dump(results, f)
-        elif output_path.endswith(".csv"):
-            df = pd.DataFrame([results])
-            df.to_csv(output_path, index=False)
-        else:
-            logger.error(f"Unsupported output format for {output_path}")
+    if output_path.endswith(".json"):
+        with open(output_path, "w") as f:
+            json.dump(results, f)
+    elif output_path.endswith(".csv"):
+        df = pd.DataFrame([results])
+        df.to_csv(output_path, index=False)
+    else:
+        logger.error(f"Unsupported output format for {output_path}")
 
 def process_file(file_path, output_path=None):
     """Process a single file."""
@@ -198,32 +189,25 @@ def process_file(file_path, output_path=None):
         return result
 
 def process_directory(directory, output_path=None):
-    """Process all supported files in a directory concurrently."""
+    """Process all supported files in a directory sequentially."""
     all_files = []
     for root, _, files in os.walk(directory):
         all_files.extend([os.path.join(root, f) for f in files if os.path.splitext(f)[1] in SUPPORTED_FORMATS])
     
-    with ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
-        results = []
-        futures = []
-        with tqdm(total=len(all_files), desc="Processing files") as pbar:
-            for file_path in all_files:
-                futures.append(executor.submit(process_file, file_path, output_path))
-
-            for future in as_completed(futures):
-                try:
-                    result = future.result()
-                    if result:
-                        results.append(result)
-                except Exception as e:
-                    logger.error(f"Error processing file: {e}")
-                finally:
-                    with tqdm_lock:
-                        pbar.update(1)
+    results = []
+    with tqdm(total=len(all_files), desc="Processing files") as pbar:
+        for file_path in all_files:
+            result = process_file(file_path, output_path)
+            if result:
+                results.append(result)
+            pbar.update(1)
 
     return results
 
 def main():
+    # Set up logging configuration
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    
     # Parse the command-line arguments
     args = parse_arguments()
 

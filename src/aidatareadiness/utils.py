@@ -2,11 +2,11 @@ import json
 
 
 CHECKLIST_FILENAME = "Data_Readiness_Checklist.json"
-widget_width = '900px'
-description_style = {'description_width': 'initial'}
-placeholder = 'Click to select option'
+WIDGET_WIDTH = '900px'
+DESCRIPTION_STYLE = {'description_width': 'initial'}
+PLACEHOLDER = 'Click to select option'
 
-# Helper functions.
+# helper functions for loading / saving checklist data     
 
 def load_checklist():
     """
@@ -72,6 +72,3 @@ def reset_checklist():
 
     with open('Data_Readiness_Checklist.json', 'w') as user_file:
         json.dump(data, user_file, indent=4)
-
-
-  

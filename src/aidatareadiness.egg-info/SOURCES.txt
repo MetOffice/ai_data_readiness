@@ -1,0 +1,10 @@
+setup.py
+src/aidatareadiness/__init__.py
+src/aidatareadiness/utils.py
+src/aidatareadiness.egg-info/PKG-INFO
+src/aidatareadiness.egg-info/SOURCES.txt
+src/aidatareadiness.egg-info/dependency_links.txt
+src/aidatareadiness.egg-info/top_level.txt
+src/aidatareadiness/checklist_auto/__init__.py
+src/aidatareadiness/checklist_auto/gridded.py
+src/aidatareadiness/checklist_auto/tabular.py
