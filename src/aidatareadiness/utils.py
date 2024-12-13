@@ -2,9 +2,9 @@ import json
 
 
 CHECKLIST_FILENAME = "Data_Readiness_Checklist.json"
-widget_width = '900px'
-description_style = {'description_width': 'initial'}
-placeholder = 'Click to select option'
+WIDGET_WIDTH = '900px'
+DESCRIPTION_STYLE = {'description_width': 'initial'}
+PLACEHOLDER = 'Click to select option'
 
 # helper functions for loading / saving checklist data     
 
