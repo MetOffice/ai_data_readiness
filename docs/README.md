@@ -36,7 +36,14 @@ git clone git@github.com:informatics-lab/ai_data_readiness.git
 
 ### Create an environment 
 
-Use [Conda](https://www.anaconda.com/download) to create environments for running the Jupyter Notebooks and Python scripts. All of the YAML files to create the Conda environments are stored in the env/ directory. **Use the commands below in the root directory of the project** to create the data_readiness conda environment for the checklist notebooks.
+Use [Conda](https://www.anaconda.com/download) to create environments for running the Jupyter Notebooks and Python scripts. All of the YAML files to create the Conda environments are stored in the env/ directory. 
+Change directory to the new ai_data_readiness folder
+
+```bash
+cd ai_data_readiness
+``` 
+
+**Use the commands below in the root directory of the project** to create the ```data_readiness``` conda environment for the checklist notebooks.
 
 ```bash
 chmod +x setup.sh
@@ -44,11 +51,28 @@ chmod +x setup.sh
 ```
 
 ### Run the checklist
-The notebooks use Jupyter Widgets (ipywidgets) to make the data entry process more effecient by utilising drop down menus to provide suggested answers. It also enables the collation of results which are stored in a json file for potential future use and will enable you to reload your answers and also view them as a data structure object. A theme of this project was making ML processes more accessible and we wanted to explore whether building more accessible UI was beneficial. We were also motivated to store the checklist answers in a structured and accessible way to enable future work and checklist assessment comparisons. 
+The notebooks use Jupyter Widgets (ipywidgets) to make the data entry process more effecient by utilising drop down menus to provide suggested answers. It also enables the collation of results which are stored in a json file for potential future use and will enable you to reload your answers and also view them as a data structure object. A theme of this project was making ML processes more accessible and we wanted to explore whether building more accessible UI was beneficial. We were also motivated to store the checklist answers in a structured and machine-readable way to enable future work and checklist assessment comparisons. 
+
+**Activate the conda environment** by running the following command:
+```bash
+conda activate data_readiness
+```
+
+**Launch Jupyter Lab** locally to run the notebooks from the root directory of the project. 
+
+```bash
+jupyter lab
+```
 
 * To load the widgets select 'Run' from the ribbon menu and then 'Run All Cells'
 * Use the save buttons to periodically save your answers in the json file.
 * You can view all your results by using the button in the finished section at the end of each notebook.
+
+## Assess a dataset with the checklist
+* Space for instructions.
+* Add links to the docs for Tabular / Gridded / Blank versions. 
+
+
 
 ## **Examples**
 We have completed the checklist with a variety of datasets to demonstrate how to use it. 
