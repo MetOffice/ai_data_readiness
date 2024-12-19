@@ -11,24 +11,17 @@ ESIP Data Readiness Cluster (2023): Checklist to Examine AI-readiness for Open E
 Readiness Matrix (2020): What is AI-Ready Open Data? NOAA. Online resource. https://www.star.nesdis.noaa.gov/star/documents/meetings/2020AI/presentations/202010/20201022_Christensen.pdf
 
 ### Why assessing dataset readiness for AI is important:
-1.	**Ensures Data Usability**
-  * Weather and climate datasets can be complex, with variations in formats, resolutions, temporal frequencies, and spatial coverage. Assessing datasets ensures that they are in a usable format for machine learning models.
-  * For example, raw weather station data might have missing timestamps, outlier values, instrument bias or inconsistent units that need to be standardized before being useful for ML.
-3.	**Facilitates Better Model Training**
-  * The quality of ML models heavily depends on the quality of data (garbage in -> garbage out). Issues like incomplete, noisy, or biased datasets can lead to poor model performance and unreliable predictions.
-4.	**Saves Time and Resources**
-  * By identifying data readiness issues early you can consider the best datasets for your problem and focus on fixing these issues rather than discovering them late in the project. This proactive approach prevents wasted effort on training models with flawed data.
-5.	**Supports Reproducibility and Scalability**
-  * Ensuring that datasets are well-documented and accessible promotes reproducibility of results and makes it easier to scale solutions for broader applications.
-6.	**Addresses Domain-Specific Challenges**
-  * Weather data often has unique challenges, such as:
+1.	**Ensures Data Usability:** Weather and climate datasets can be complex, with variations in formats, resolutions, temporal frequencies, and spatial coverage. Assessing datasets ensures that they are in a usable format for machine learning models. For example, raw weather station data might have missing timestamps, outlier values, instrument bias or inconsistent units that need to be standardized before being useful for ML.
+3.	**Facilitates Better Model Training:** The quality of ML models heavily depends on the quality of data (garbage in -> garbage out). Issues like incomplete, noisy, or biased datasets can lead to poor model performance and unreliable predictions.
+4.	**Saves Time and Resources:** By identifying data readiness issues early you can consider the best datasets for your problem and focus on fixing these issues rather than discovering them late in the project. This proactive approach prevents wasted effort on training models with flawed data.
+5.	**Supports Reproducibility and Scalability:** Ensuring that datasets are well-documented and accessible promotes reproducibility of results and makes it easier to scale solutions for broader applications.
+6.	**Addresses Domain-Specific Challenges:** Weather data often has unique challenges, such as:
     * Temporal dependencies: Weather phenomena are time-sensitive, so gaps in data timestamps can severely impact model accuracy.
     * Spatial resolution: High-resolution data might be necessary for localized weather predictions.
     * Heterogeneity: Weather datasets often combine different sources (e.g., satellite images, sensor readings, and reanalysis data) that need integrating for interoperability.
     * A data readiness assessment identifies these domain-specific issues so you can consider how to mitigate them, paving the way for effective ML models.
-7.	**Promotes Ethical and Responsible AI**
-  * Assessing dataset readiness includes checking for biases or limitations in the data, which helps avoid unintentional harm or inaccuracies in predictions.
-  * Ethical AI systems should be transparent about their data sources and limitations. If a weather dataset has known issues (e.g., gaps in temporal coverage or missing metadata), these should be documented. This transparency allows users to interpret the model’s predictions responsibly, avoiding over-reliance on potentially flawed outputs.
+7.	**Promotes Ethical and Responsible AI:** Assessing dataset readiness includes checking for biases or limitations in the data, which helps avoid unintentional harm or inaccuracies in predictions.
+Ethical AI systems should be transparent about their data sources and limitations. If a weather dataset has known issues (e.g., gaps in temporal coverage or missing metadata), these should be documented. This transparency allows users to interpret the model’s predictions responsibly, avoiding over-reliance on potentially flawed outputs.
 
 
 ### Prerequisits
