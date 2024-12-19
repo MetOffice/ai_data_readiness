@@ -52,7 +52,7 @@ This repository contains a checklist which will help you identify if your datase
 
 Here is a short video to guide you through the setup process: <br>
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=NYK4KkcuXGo" target="_blank">
+  <a href="https://www.youtube.com/watch?v=NYK4KkcuXGo">
     <img src="./images/setup_thumbnail_img.png" alt="Data Readiness Setup Video" height="250", width="auto">
   </a>
 </p>
