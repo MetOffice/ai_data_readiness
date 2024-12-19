@@ -69,8 +69,10 @@ jupyter lab
 * You can view all your results by using the button in the finished section at the end of each notebook.
 
 ## Assess a dataset with the checklist
-* Space for instructions.
-* Add links to the docs for Tabular / Gridded / Blank versions. 
+
+Use the links below for docs relating to the specific versions of the checklist:
+* [Tabular Checklist Docs](https://github.com/informatics-lab/ai_data_readiness/blob/master/docs/tabular_checklist_docs.md)
+* Gridded Checklist - need to finish. 
 
 
 
