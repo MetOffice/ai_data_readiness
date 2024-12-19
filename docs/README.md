@@ -92,7 +92,7 @@ jupyter lab
 
 ## Assess a dataset with the checklist
 
-Use the links below for docs relating to the specific versions of the checklist:
+Use the links below for docs relating to the specific versions of the checklist and guidance on how to start assessing your first dataset:
 * [Tabular Checklist Docs](https://github.com/informatics-lab/ai_data_readiness/blob/master/docs/tabular_checklist_docs.md)
 * Gridded Checklist - need to finish. 
 
