@@ -1,9 +1,16 @@
 # Tabular Checklist Docs
 
 ## Setup
-* Ensure you have set up the checklist_requirements.yml environment.
+* Ensure you have set up and activated the checklist_requirements.yml environment as explained on the project readme.
 * Run the notebooks locally using Jupyter Lab.
 ___
+
+Here is a short video to guide you through using the tabular notebook checklist: <br>
+<p align="center">
+  <a href="https://youtu.be/TJd8kijuTqo">
+    <img src="./images/setup_thumbnail_img.png" alt="Data Readiness Setup Video" height="250", width="auto">
+  </a>
+</p>
 
 ### Hidden widget code
 We have used ipywidgets to create data entry fields for the checklist questions to make the process more accessible. <br>
