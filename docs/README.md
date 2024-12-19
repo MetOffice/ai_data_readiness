@@ -49,6 +49,10 @@ This repository contains a checklist which will help you identify if your datase
 * [Checklist Template](https://github.com/informatics-lab/ai_data_readiness/tree/master/Checklist%20Template) - a generic blank version of the template
 
 ## **Setup**
+
+Here is a short video to guide you through the setup process: <br>
+[![Data Readiness Setup Video](https://img.youtube.com/vi/NYK4KkcuXGo/0.jpg)](https://www.youtube.com/watch?v=NYK4KkcuXGo)
+
 ### Clone the repository
 
 ```bash
