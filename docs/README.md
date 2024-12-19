@@ -10,7 +10,7 @@ ESIP Data Readiness Cluster (2023): Checklist to Examine AI-readiness for Open E
 
 Readiness Matrix (2020): What is AI-Ready Open Data? NOAA. Online resource. https://www.star.nesdis.noaa.gov/star/documents/meetings/2020AI/presentations/202010/20201022_Christensen.pdf
 
-### Why Assessing Dataset Readiness fo AI is important:
+### Why assessing dataset readiness for AI is important:
 1.	**Ensures Data Usability**
   * Weather and climate datasets can be complex, with variations in formats, resolutions, temporal frequencies, and spatial coverage. Assessing datasets ensures that they are in a usable format for machine learning models.
   * For example, raw weather station data might have missing timestamps, outlier values, instrument bias or inconsistent units that need to be standardized before being useful for ML.
