@@ -8,7 +8,7 @@ ___
 Here is a short video to guide you through using the tabular notebook checklist: <br>
 <p align="center">
   <a href="https://youtu.be/TJd8kijuTqo">
-    <img src="./images/setup_thumbnail_img.png" alt="Data Readiness Setup Video" height="250", width="auto">
+    <img src="./images/tabular_thumbnail_img.png" alt="Data Readiness Setup Video" height="300", width="auto">
   </a>
 </p>
 
