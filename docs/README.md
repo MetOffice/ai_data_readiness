@@ -17,8 +17,7 @@ Readiness Matrix (2020): What is AI-Ready Open Data? NOAA. Online resource. http
 3.	**Facilitates Better Model Training**
   * The quality of ML models heavily depends on the quality of data (garbage in -> garbage out). Issues like incomplete, noisy, or biased datasets can lead to poor model performance and unreliable predictions.
 4.	**Saves Time and Resources**
-  * By identifying data readiness issues early you can consider the best datasets for your problem and focus on fixing these issues rather than discovering them late in the project.
-  * This proactive approach prevents wasted effort on training models with flawed data.
+  * By identifying data readiness issues early you can consider the best datasets for your problem and focus on fixing these issues rather than discovering them late in the project. This proactive approach prevents wasted effort on training models with flawed data.
 5.	**Supports Reproducibility and Scalability**
   * Ensuring that datasets are well-documented and accessible promotes reproducibility of results and makes it easier to scale solutions for broader applications.
 6.	**Addresses Domain-Specific Challenges**
