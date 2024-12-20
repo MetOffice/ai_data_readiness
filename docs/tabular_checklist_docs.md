@@ -101,7 +101,12 @@ Calculating Z-Scores can also be useful when looking for outliers.The ```print_z
 <img src="images/tabular_checklist_docs/9_outliers.png" width="auto" height="500">
 
 
-
+## Checklist Completion:
+* Work through the 4 Jupyter notebooks using the code examples to help you explore the dataset.
+* Record your answers using the widget data entry form elements and use the buttons to save your information to .json as you work through.
+* Evidence your data exploration using the notebook to demonstrate how you found the answers (see examples in the examples folder).
+* Consider the value of assessing a dataset and the importance of the process in determining if a dataset is AI ready. 
+___
 
 
 
