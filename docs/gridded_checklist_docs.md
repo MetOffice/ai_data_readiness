@@ -7,7 +7,7 @@ ___
 
 Here is a short video to guide you through using the gridded notebook checklist: <br>
 <p align="center">
-  <a href="[https://youtu.be/RWZfME0q6b8](https://youtu.be/RWZfME0q6b8)">
+  <a href="https://youtu.be/RWZfME0q6b8">
     <img src="./images/checklist_thumbnail_img.png" alt="Data Readiness Setup Video" height="300", width="auto">
   </a>
 </p>
