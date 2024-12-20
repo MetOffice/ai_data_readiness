@@ -41,6 +41,7 @@ This repository contains a checklist which will help you identify if your datase
 * [Checklist Template Tabular Data Tutorial](https://github.com/informatics-lab/ai_data_readiness/tree/master/Checklist%20Template%20Tabular%20Data%20Tutorial) - a version of the template specifically tailored for tabular datasets. 
 * [Checklist Template](https://github.com/informatics-lab/ai_data_readiness/tree/master/Checklist%20Template) - a generic blank version of the template
 
+
 ## **Setup**
 
 Here is a short video to guide you through the setup process: <br>
@@ -90,11 +91,21 @@ jupyter lab
 * Use the save buttons to periodically save your answers in the json file.
 * You can view all your results by using the button in the finished section at the end of each notebook.
 
-## Assess a dataset with the checklist
 
-Use the links below for docs relating to the specific versions of the checklist and guidance on how to start assessing your first dataset:
+## Assess a dataset with the checklist
+The tabular and gridded versions of the checklists include code to help you investigate the dataset complete the checklist. This includes ideas on how to access dataset information and functions which may help you interogate aspects of the data and metadata. These are experimental ideas with the long term view on pulling this together into a python package which could analyse datasets and report on aspects of datasets, their suitabuility, rate and suggest improvements. <br>
+
+Decide if you plan to work with a tabular or gridded dataset and use the links to the relevant docs below to help you get started assessing a dataset.
 * [Tabular Checklist Docs](https://github.com/informatics-lab/ai_data_readiness/blob/master/docs/tabular_checklist_docs.md)
-* Gridded Checklist - need to finish. 
+* [Gridded Checklist Docs](https://github.com/informatics-lab/ai_data_readiness/blob/master/docs/gridded_checklist_docs.md)
+
+
+### Checklist Completion:
+* Review the docs for either the tabular / gridded notebooks using the links above. 
+* Work through the 4 Jupyter notebooks using the code examples contained in the notebooks to help you explore your dataset.
+* Record your answers using the widget data entry form elements and use the buttons to save your information to .json as you work through.
+* Evidence your data exploration using the notebook to demonstrate how you found the answers (see examples in the examples folder).
+* Consider the value of assessing a dataset and the importance of the process in determining if a dataset is AI ready. 
 
 
 
