@@ -51,25 +51,25 @@ Review the function doc strings for more information on what they do and how to 
 
 
 ### Load data
-We have provided a ```read_file()``` function which can load a variety of different tabular file formats into a Pandas DataFrame.
+We have provided a ```read_file()``` function which can load a variety of different tabular file formats into a Pandas DataFrame. <br>
 <img src="images/tabular_checklist_docs/1_load_data.png" width="auto" height="450">
 ___
 
 
 ### Expected spatial coverage
-The ```check_spatial_coverage()``` function can review the expected latitude and longitude and inform you if any points in the tabular dataset are outside the bounds expected. 
+The ```check_spatial_coverage()``` function can review the expected latitude and longitude and inform you if any points in the tabular dataset are outside the bounds expected.  <br>
 
 <img src="images/tabular_checklist_docs/2_spatial_coverage.png" width="auto" height="350">
 ___
 
 ### Expected temporarl coverage
-The ```check_temporal_coverage()``` function can review the expected time period and time frequency and inform you if there are missing dates. 
+The ```check_temporal_coverage()``` function can review the expected time period and time frequency and inform you if there are missing dates.  <br>
 <img src="images/tabular_checklist_docs/3_temporal_coverage.png" width="auto" height="300">
 ___
 
 
 ### Dataset size
-The ```csv_size_info()``` function demonstrates how you could investigate the size of a tabular dataset file, and its size in memory.
+The ```csv_size_info()``` function demonstrates how you could investigate the size of a tabular dataset file, and its size in memory. <br>
 <img src="images/tabular_checklist_docs/4_dataset_size.png" width="auto" height="350">
 ___
 
@@ -82,22 +82,22 @@ The ```null_percent()``` function presents the null values as a new DataFrame wi
 <img src="images/tabular_checklist_docs/5_null_values.png" width="auto" height="450">
 
 Many datasets have missing values which been assigned an arbitary value to represent a missing value such as 99.99, 999.9, 9999.9 etc. The ```mask_values()``` function will enable you to pass an array of these values and replace them will np.nan or some other value such as 0. <br>
-We can then run the ```null_percent()``` function again to review the missing values properly. 
+We can then run the ```null_percent()``` function again to review the missing values properly.  <br>
 <img src="images/tabular_checklist_docs/6_null_values.png" width="auto" height="500">
 
 ___
 
 
 ### Outliers
-The ```.describe()``` method is very useful for gaining a general understanding of key data statistics such as the mean, min and max which might give you an initial suspicion if any values might be outliers. 
+The ```.describe()``` method is very useful for gaining a general understanding of key data statistics such as the mean, min and max which might give you an initial suspicion if any values might be outliers.  <br>
 ![image](images/tabular_checklist_docs/7_outliers.png)
 
 
-It can be helpful to visualise your data to check for outliers. Here is an example idea using a function called ```plot_violin_samples()```
+It can be helpful to visualise your data to check for outliers. Here is an example idea using a function called ```plot_violin_samples()``` <br>
 ![image](images/tabular_checklist_docs/8_outliers.png)
 
 
-Calculating Z-Scores can also be useful when looking for outliers.The ```print_z_scores()``` function can help you analyse the chance of containing outliers.
+Calculating Z-Scores can also be useful when looking for outliers.The ```print_z_scores()``` function can help you analyse the chance of containing outliers.  <br>
 <img src="images/tabular_checklist_docs/9_outliers.png" width="auto" height="500">
 
 
