@@ -15,16 +15,16 @@ Here is a short video to guide you through using the gridded notebook checklist:
 ### Hidden widget code
 We have used ipywidgets to create data entry fields for the checklist questions to make the process more accessible. <br>
 
-The code to generate these is contained in the hidden cells with ... ellipses. 
+The code to generate these is contained in the hidden cells with ... ellipses.  <br>
 <img src="images/hidden_widget_code.png" width="auto" height="65">
 
-You can open these by clicking on the ... if you wish to review the code. To close them click the blue bar on the left. 
+You can open these by clicking on the ... if you wish to review the code. To close them click the blue bar on the left.  <br>
 <img src="images/hidden_widget_code_open.png" width="auto" height="180">
 ___
 
 ### Save your answers.
 
-Use the save buttons placed throuhgout the notebooks to save each section. This will save your answers to the .json file. 
+Use the save buttons placed throuhgout the notebooks to save each section. This will save your answers to the .json file.  <br>
 <img src="images/save_button.png" width="auto" height="40">
 
 
