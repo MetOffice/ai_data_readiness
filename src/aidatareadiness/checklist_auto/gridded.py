@@ -26,6 +26,21 @@ def parse_arguments():
     
     return args
 
+
+def temporal_check(dataset, temporal_coord_name):
+    """Converts the temporal coord name to time to work with temporal functions, if it is not already time."""
+    if 'time' not in dataset.coords:
+        print('No time coordinate found.')
+        print(dataset.dims)
+        dataset = dataset.rename({temporal_coord_name : 'time'})
+        print(f'{temporal_coord_name} coordinate name changed to time')
+        print(dataset.dims)
+        return dataset
+    else:
+        print('Time coordinate found')
+        print(dataset.dims)
+        
+
 def detect_gridded_format_and_open(file_path):
     """Detect the file format based on the file extension and open it with xarray."""
     _, file_extension = os.path.splitext(file_path)
