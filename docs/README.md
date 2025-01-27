@@ -60,7 +60,7 @@ git clone git@github.com:informatics-lab/ai_data_readiness.git
 ### Create an environment 
 
 Use [Conda](https://www.anaconda.com/download) to create environments for running the Jupyter Notebooks and Python scripts. All of the YAML files to create the Conda environments are stored in the env/ directory. 
-Change directory to the new ai_data_readiness folder
+Change directory to the new ai_data_readiness folder. Or, use the automated process below.
 
 ```bash
 cd ai_data_readiness
