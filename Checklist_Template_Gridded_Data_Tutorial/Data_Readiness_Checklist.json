@@ -66,21 +66,23 @@
         "UsageRecommendations": null
     },
     "DataAccess": {
-        "FileFormats": [],
-        "FileFormatsMachineReadable": null,
-        "OpenFormatAvailable": null,
-        "FormatConversionTools": null,
-        "ConversionToolsLink": "",
-        "AuthenticationRequired": null,
-        "DirectDownloadAvailable": null,
-        "APIorWebAvailable": null,
-        "APIOpenStandard": null,
-        "APIDocumentation": null,
-        "APIDocumentationLink": "",
-        "SecurityMeasuresTaken": null,
-        "DataAggregated": null,
-        "DataAnonymized": null,
-        "SecureAccessForAuthorizedUsers": null
+        "FileFormats": [
+            "netCDF"
+        ],
+        "FileFormatsMachineReadable": "Yes",
+        "OpenFormatAvailable": "Yes",
+        "FormatConversionTools": "Yes",
+        "ConversionToolsLink": "https://scitools-iris.readthedocs.io/en/stable/index.html https://unidata.github.io/netcdf4-python/ https://www.giss.nasa.gov/tools/panoply/ https://www.unidata.ucar.edu/software/tds/ https://www.mathworks.com/products/matlab.html https://docs.xarray.dev/en/stable/",
+        "AuthenticationRequired": "No",
+        "DirectDownloadAvailable": "Yes",
+        "APIorWebAvailable": "Yes",
+        "APIOpenStandard": "Yes",
+        "APIDocumentation": "Yes",
+        "APIDocumentationLink": "https://boto3.amazonaws.com/v1/documentation/api/latest/index.html",
+        "SecurityMeasuresTaken": "N/A",
+        "DataAggregated": "No",
+        "DataAnonymized": "N/A",
+        "SecureAccessForAuthorizedUsers": "No"
     },
     "DataPreparation": {
         "NullValuesFilled": null,
