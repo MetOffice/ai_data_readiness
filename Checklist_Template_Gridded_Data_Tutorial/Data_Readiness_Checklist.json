@@ -85,12 +85,12 @@
         "SecureAccessForAuthorizedUsers": "No"
     },
     "DataPreparation": {
-        "NullValuesFilled": null,
-        "OutliersIdentified": null,
-        "Gridded": null,
-        "TransformedFromOriginal": null,
-        "OriginalSamplingAvailable": null,
-        "SupervisedLearningLabels": null,
-        "SupervisedLearningLabelStandards": ""
+        "NullValuesFilled": "Yes",
+        "OutliersIdentified": "Yes, removed",
+        "Gridded": "Regularly gridded in space and constant time-frequency",
+        "TransformedFromOriginal": "No, this is the original sampling",
+        "OriginalSamplingAvailable": "N/A",
+        "SupervisedLearningLabels": "No",
+        "SupervisedLearningLabelStandards": "N/A"
     }
 }
