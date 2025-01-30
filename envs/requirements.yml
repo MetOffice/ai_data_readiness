@@ -5,6 +5,7 @@ dependencies:
   # Notebooks
   - python=3.10
   - jupyterlab=4.2.*
+  - jupyterlab_widgets
   - ipykernel=6.29.*
   - ipywidgets
 
