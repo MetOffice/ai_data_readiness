@@ -52,7 +52,7 @@ Here is a short video to guide you through the setup process: <br>
 </p>
 
 ### Clone the repository
-
+SSH method:
 ```bash
 git clone git@github.com:informatics-lab/ai_data_readiness.git 
 ```
@@ -81,7 +81,7 @@ The notebooks use Jupyter Widgets (ipywidgets) to make the data entry process mo
 conda activate data_readiness
 ```
 
-**Launch Jupyter Lab** locally to run the notebooks from the root directory of the project. 
+**Launch Jupyter Lab** locally to run the notebooks from the root directory of the project: 
 
 ```bash
 jupyter lab
@@ -117,7 +117,7 @@ Some of the completed checklist folders include simple example machine learning 
 | Dataset | Organization | Data Summary | Machine Learning Summary | Environment Directory | 
 | - | - | - | - | - |
 | ERA5 | ECMWF | Global Geospatial Gridded Climate Reanalysis | Autoencoder | era5_requirements.yml |
-| Global Summary of the Day | NOAA | Daiky global weather station observations | XGBoost, LSTM  | gsod_xgboost_requirements.yml, gsod_lstm_requirements.yml |
+| Global Summary of the Day | NOAA | Daily global weather station observations | XGBoost, LSTM  | gsod_xgboost_requirements.yml, gsod_lstm_requirements.yml |
 | HadCRUT5 | Met Office | Global temperature anomaly data for climate monitoring | XGBoost, CNN | hadcrut5_requirements.yml |
 | HadUK-Grid | Met Office | Gridded UK climate data for temperature and precipitation | CNN | haduk_grid_requirements.yml |
 | GOES Satellite Imagery | NOAA | Real-time satellite imagery for weather monitoring | ConvLSTM | goes-satellite-image-requirements.yml |
