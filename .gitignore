@@ -1,3 +1,5 @@
+*.nc
+*.nc4
 examples/*/data/*
 !examples/*/data/.gitkeep
 examples/*/runs
