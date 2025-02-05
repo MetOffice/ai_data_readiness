@@ -4,9 +4,9 @@
 ## **Overview**
 
 ### Checklist origin
-The checklist is developed using the 2019 draft readiness matrix developed by the Office of Science and Technology Policy Subcommittee on Open Science as a basis. This checklist is developed through a collaboration of ESIP Data Readiness Cluster members include representatives from NOAA, NASA, USGS, and other organizations. 
+The checklist is developed using the 2019 draft readiness matrix developed by the Office of Science and Technology Policy Subcommittee on Open Science as a basis. This checklist is developed through a collaboration of [ESIP](https://www.esipfed.org/) [Data Readiness Cluster](https://www.esipfed.org/event/data-readiness-cluster/) members include representatives from NOAA, NASA, USGS, and other organizations. 
 
-ESIP Data Readiness Cluster (2023): Checklist to Examine AI-readiness for Open Environmental Datasets v.1.0. ESIP. Online resource. https://doi.org/10.6084/m9.figshare.19983722.v1
+[ESIP Data Readiness Cluster (2023): Checklist](https://github.com/ESIPFed/data-readiness) to Examine AI-readiness for Open Environmental Datasets v.1.0. ESIP. Online resource. https://doi.org/10.6084/m9.figshare.19983722.v1
 
 Readiness Matrix (2020): What is AI-Ready Open Data? NOAA. Online resource. https://www.star.nesdis.noaa.gov/star/documents/meetings/2020AI/presentations/202010/20201022_Christensen.pdf
 
