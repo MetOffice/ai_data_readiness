@@ -3,7 +3,8 @@ import sys, os
 import argparse
 from urllib.request import build_opener
 from datetime import datetime, date, timedelta
- 
+import xarray as xr
+
 # Base URL for NCAR HUMID daily data
 BASE_URL = 'https://data.rda.ucar.edu/d314008/'
  
@@ -29,7 +30,6 @@ def download_humid_data(base_url, start_datestring, end_datestring, download_dir
     if filelist == []:
         raise Exception("files not found at URL")
  
-    print(filelist)
     for file in filelist:
         ofile = os.path.basename(file)
         sys.stdout.write("downloading " + ofile + " ... ")
@@ -39,6 +39,16 @@ def download_humid_data(base_url, start_datestring, end_datestring, download_dir
         outfile.write(infile.read())
         outfile.close()
         sys.stdout.write("done\n")
+
+        dataset = xr.open_dataset(f'{download_dir}/{ofile}')
+        lat_imin = 1498
+        lat_imax = 1754
+        lon_imin = 1502
+        lon_imax = 1758
+        var_list = ['FRC_URB2D', 'URB_CAT', 'q2', 't2_raw', 'tb_urb2d', 'tb_urb2d_max']
+        sliced_var = dataset[var_list].isel(lat=slice(lat_imin, lat_imax), lon=slice(lon_imin, lon_imax))
+        sliced_var.to_netcdf(f'{download_dir}/proc_{ofile}')
+        os.remove(f'{download_dir}/{ofile}')
  
  
 def main():
