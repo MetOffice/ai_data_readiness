@@ -1,3 +1,6 @@
+# (C) British Crown Copyright 2017-2025, Met Office.
+# Please see LICENSE.md for license details.
+
 """
 A script to download the first HadCRUT5 Analysis Anomalies ensemble file. 
 This process will download the first 10 ensemble files as a zip, extract and save the first file then delete the zip to conserve memory.
