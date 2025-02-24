@@ -1,7 +1,7 @@
+#!/bin/bash
+
 # (C) British Crown Copyright 2017-2025, Met Office.
 # Please see LICENSE.md for license details.
-
-#!/bin/bash
 
 # Exit immediately if a command exits with a non-zero status
 set -e
