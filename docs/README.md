@@ -122,5 +122,9 @@ Some of the completed checklist folders include simple example machine learning 
 | HadUK-Grid | Met Office | Gridded UK climate data for temperature and precipitation | CNN | haduk_grid_requirements.yml |
 | GOES Satellite Imagery | NOAA | Real-time satellite imagery for weather monitoring | ConvLSTM | goes-satellite-image-requirements.yml |
 
+
+## **Contributing Dataset Assessments**
+If you use this checklist to complete dataset assessments please create a branch and push a folder of your completed checklists here: [ai_data_readiness/examples/user_completed_checklists](https://github.com/informatics-lab/ai_data_readiness/tree/master/examples/user_completed_checklists)
+
 ## **Dataset Suggestions**
 Find suggested datasets here: [datasets.md](./datasets.md)
