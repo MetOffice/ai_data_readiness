@@ -49,6 +49,7 @@ def detect_gridded_format_and_open(file_path):
     _, file_extension = os.path.splitext(file_path)
     
     format_engine_map = {
+        '.nc4': 'netcdf4',  # NetCDF
         '.nc': 'netcdf4',  # NetCDF
         '.grib': 'cfgrib',  # GRIB
         '.h5': 'h5netcdf',  # HDF5

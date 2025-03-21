@@ -92,8 +92,12 @@ def find_general_info(dataset):
 
     except KeyError:
         print("Dict key not found")
+        title = 'NO TITLE'
+        version = 'NO VERSION'
     except ValueError:
         print("Value not accessible")
+        title = 'NO TITLE'
+        version = 'NO VERSION'
         
     # Print the information
     print("Dataset Name:", title)
@@ -147,7 +151,7 @@ def find_dimensions(dataset):
     dimensions_info = {}
 
     # Number of dimensions
-    dimensions_info["num_dimensions"] = len(dataset.dims)
+    dimensions_info["num_dimensions"] = len(dataset.sizes)
 
     # Create a dict to store the details of each dimension.
     dimensions_info["dimensions"] = {}
@@ -156,7 +160,7 @@ def find_dimensions(dataset):
     total_datapoints = 1
 
     # Inspect all dimensions
-    for dim_name, dim_size in dataset.dims.items():
+    for dim_name, dim_size in dataset.sizes.items():
         # Add the dimension name and size to the dict.
         dimensions_info["dimensions"][dim_name] = dim_size
 
