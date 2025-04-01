@@ -126,5 +126,9 @@ Some of the completed checklist folders include simple example machine learning 
 ## **Contributing Dataset Assessments**
 If you use this checklist to complete dataset assessments please create a branch and push a folder of your completed checklists here: [ai_data_readiness/examples/user_completed_checklists](https://github.com/informatics-lab/ai_data_readiness/tree/master/examples/user_completed_checklists)
 
+## **Contributing Code**
+The automated assessment techniques are experimental. We would greatly encourage you to review, improve and develop more automated check techniques and contribute to the project. 
+To do so create a branch and push your changes. 
+
 ## **Dataset Suggestions**
 Find suggested datasets here: [datasets.md](./datasets.md)
