@@ -37,9 +37,9 @@ The checklist is broken up into 5 sections contained in 4 notebooks (part 1 & 2 
 
 ### Checklist versions
 This repository contains a checklist which will help you identify if your dataset is ready for machine learning model ingestion. There are different versions of the checklist:
-* [Checklist Template Gridded Data Tutorial](https://github.com/informatics-lab/ai_data_readiness/tree/master/Checklist%20Template%20Gridded%20Data%20Tutorial) - a version of the template specifically tailored for gridded datasets.
-* [Checklist Template Tabular Data Tutorial](https://github.com/informatics-lab/ai_data_readiness/tree/master/Checklist%20Template%20Tabular%20Data%20Tutorial) - a version of the template specifically tailored for tabular datasets. 
-* [Checklist Template](https://github.com/informatics-lab/ai_data_readiness/tree/master/Checklist%20Template) - a generic blank version of the template
+* [Checklist Template Gridded Data Tutorial](https://github.com/MetOffice/ai_data_readiness/tree/master/Checklist_Template_Gridded_Data_Tutorial) - a version of the template specifically tailored for gridded datasets.
+* [Checklist Template Tabular Data Tutorial](https://github.com/MetOffice/ai_data_readiness/tree/master/Checklist_Template_Tabular_Data_Tutorial) - a version of the template specifically tailored for tabular datasets. 
+* [Checklist Template](https://github.com/MetOffice/ai_data_readiness/tree/master/Checklist_Template) - a generic blank version of the template
 
 
 ## **Setup**
@@ -96,8 +96,8 @@ jupyter lab
 The tabular and gridded versions of the checklists include code to help you investigate the dataset complete the checklist. This includes ideas on how to access dataset information and functions which may help you interogate aspects of the data and metadata. These are experimental ideas with the long term view on pulling this together into a python package which could analyse datasets and report on aspects of datasets, their suitabuility, rate and suggest improvements. <br>
 
 Decide if you plan to work with a tabular or gridded dataset and use the links to the relevant docs below to help you get started assessing a dataset.
-* [Tabular Checklist Docs](https://github.com/informatics-lab/ai_data_readiness/blob/master/docs/tabular_checklist_docs.md)
-* [Gridded Checklist Docs](https://github.com/informatics-lab/ai_data_readiness/blob/master/docs/gridded_checklist_docs.md)
+* [Tabular Checklist Docs](https://github.com/MetOffice/ai_data_readiness/blob/master/docs/tabular_checklist_docs.md)
+* [Gridded Checklist Docs](https://github.com/MetOffice/ai_data_readiness/blob/master/docs/gridded_checklist_docs.md)
 
 
 ### Checklist Completion:
@@ -124,7 +124,7 @@ Some of the completed checklist folders include simple example machine learning 
 
 
 ## **Contributing Dataset Assessments**
-If you use this checklist to complete dataset assessments please create a branch and push a folder of your completed checklists here: [ai_data_readiness/examples/user_completed_checklists](https://github.com/informatics-lab/ai_data_readiness/tree/master/examples/user_completed_checklists)
+If you use this checklist to complete dataset assessments please create a branch and push a folder of your completed checklists here: [ai_data_readiness/examples/user_completed_checklists](https://github.com/MetOffice/ai_data_readiness/tree/master/examples/user_completed_checklists)
 
 ## **Contributing Code**
 The automated assessment techniques are experimental. We would greatly encourage you to review, improve and develop more automated check techniques and contribute to the project. 
